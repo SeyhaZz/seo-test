@@ -1,0 +1,430 @@
+
+/* multiple use */
+body,
+.main-content,
+.main-content span,
+.link-button
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* body background */
+body {
+    background-image: url('../storage/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: top;
+    background-position-x: center;
+    background-blend-mode: screen;
+    z-index: 1;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+}
+/* bottom coins image */
+img.coins-image {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* main content */
+.main-content-container,
+.group-img-light-and-content {
+    z-index: 3;
+}
+.main-content-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.main-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.content-and-light-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.group-img-light-and-content {
+    position: relative;
+}
+.main-content {
+    display: flex;
+    z-index: 6;
+    position: relative;
+    margin-bottom: 80px;
+}
+.main-content span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    display: block;
+    text-shadow: black 6px 6px 6px;
+    -webkit-text-stroke: 1px orange;
+}
+.lighting-img {
+    z-index: 5;
+    position: absolute;
+    width: 80%;
+}
+.img-button {
+    width: 32%;
+    margin-bottom: 20px;
+}
+.img-button,
+.img-landlord {
+    margin-left: 105px;
+    z-index: 7;
+}
+.img-landlord {
+    margin-top: 100px;
+}
+
+/* game banner and girl */
+.banner-and-girl-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.banner-and-girl-container div {
+    width: fit-content;
+    position: fixed;
+    right: -40px;
+}
+.banner-img {
+    width: 90%;
+    margin-top: 19px;
+}
+.girl-img {
+    position: absolute;
+    bottom: -190px;
+    right: 170px;
+    width: 53%;
+}
+
+/*** responsive ***/
+/* small device */
+@media only screen and (min-width: 200px) {
+    /* coints image */
+    img.coins-image {
+        height: 65%;
+    }
+    /* content */
+    .main-content-container {
+        align-items: flex-start;
+    }
+    .main-content-container .group-img-light-and-content {
+        margin-top: 40px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content span {
+        font-size: 1.6rem;
+    }
+    span.second-span-content {
+        margin-top: -6px;
+    }
+    .lighting-img {
+        top: -85px;
+        left: -37px;
+        width: 80%;
+    }
+
+    .main-content-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img-button,
+    .img-landlord {
+        margin-left: unset;
+    }
+    .img-button {
+        width: 60%;
+        margin-top: -290px;
+    }
+    .img-landlord {
+        width: 33%;
+        margin-bottom: 35px;
+    }
+    .banner-and-girl-container div {
+        width: fit-content;
+        position: fixed;
+        right: -30px;
+        bottom: 260px;
+    }
+    .girl-img {
+        position: absolute;
+        bottom: -245px;
+        right: 65px;
+        width: 73%;
+    }
+}
+/* mobile */
+@media only screen and (min-width: 281px) {
+    /* coints image */
+    img.coins-image {
+        height: 72%;
+    }
+    /* content */
+    .group-img-light-and-content {
+        margin-top: 70px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content span {
+        font-size: 2.2rem;
+    }
+    span.second-span-content {
+        margin-top: -11px;
+    }
+    .lighting-img {
+        top: -115px;
+        left: -47px;
+        width: 80%;
+    }
+    
+    .main-content-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img-button,
+    .img-landlord {
+        margin-left: unset;
+    }
+    .img-button {
+        width: 60%;
+        margin-top: -360px;
+    }
+    .img-landlord {
+        width: 33%;
+        margin-bottom: 35px;
+    }
+    .banner-and-girl-container div {
+        width: fit-content;
+        position: fixed;
+        right: -47px;
+        bottom: 270px;
+    }
+    .girl-img {
+        position: absolute;
+        bottom: -275px;
+        right: 65px;
+        width: 73%;
+    }
+}
+/* tablet */
+@media only screen and (min-width: 768px) {
+    /* coints image */
+    img.coins-image {
+        height: unset;
+        width: 100%;
+        margin-bottom: -20px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content span {
+        font-size: 4.1rem;
+    }
+    span.second-span-content {
+        margin-top: -17px;
+    }
+    .lighting-img {
+        top: -205px;
+        left: -110px;
+        width: 80%;
+    }
+
+    .img-landlord {
+        width: 30%;
+    }
+    .main-content-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img-button,
+    .img-landlord {
+        margin-left: unset;
+    }
+    .img-button {
+        width: 60%;
+        margin-top: -290px;
+    }
+    .img-landlord {
+        width: 33%;
+        margin-bottom: 35px;
+    }
+    .banner-and-girl-container div {
+        width: fit-content;
+        position: fixed;
+        right: -30px;
+        bottom: 200px;
+    }
+    .banner-img {
+        width: 100%;
+    }
+    .girl-img {
+        position: absolute;
+        bottom: -430px;
+        right: 65px;
+        width: 73%;
+    }
+}
+/* nest hub */
+@media only screen and (min-width: 992px) {
+    /* coints image */
+    img.coins-image {
+        height: unset;
+        width: 100%;
+        margin-bottom: unset;
+    }
+    .main-content {
+        flex-direction: row;
+    }
+    .main-content span {
+        font-size: 3.3rem;
+    }
+    span.second-span-content {
+        margin-top: unset;
+    }
+    .lighting-img {
+        top: -255px;
+        left: -125px;
+        width: unset;
+    }
+    .img-button {
+        width: 20%;
+        margin-bottom: 20px;
+    }
+    .img-button,
+    .img-landlord {
+        margin-left: 50px;
+        z-index: 7;
+    }
+    .img-landlord {
+        margin-top: 90px;
+    }
+
+    .main-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+     /* girl */
+    .banner-and-girl-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .banner-and-girl-container div {
+        width: fit-content;
+        position: fixed;
+        right: -40px;
+    }
+    .banner-img {
+        width: 90%;
+        margin-top: 19px;
+    }
+    .girl-img {
+        position: absolute;
+        bottom: -190px;
+        right: 170px;
+        width: 53%;
+    }
+}
+/* labtop & desktop */
+@media only screen and (min-width: 1025px) {
+    /* coints image */
+    img.coins-image {
+        height: unset;
+        width: 100%;
+        margin-bottom: unset;
+    }
+    /* content */
+    .main-content span {
+        font-size: 4.1rem;
+    }
+    span.second-span-content {
+        margin-top: unset;
+    }
+    .lighting-img {
+        top: -255px;
+        left: -140px;
+        width: unset;
+    }
+
+    /* girl */
+    .banner-and-girl-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .banner-and-girl-container div {
+        width: fit-content;
+        position: fixed;
+        right: -40px;
+    }
+    .banner-img {
+        width: 90%;
+        margin-top: 19px;
+    }
+    .girl-img {
+        position: absolute;
+        bottom: -190px;
+        right: 170px;
+        width: 53%;
+    }
+
+    .main-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content-and-light-wrapper {
+        width: 100%;
+    }
+    .img-button {
+        width: 32%;
+        margin-bottom: 20px;
+        margin-top: unset;
+    }
+    .img-button
+    .img-landlord {
+        width: 10%;
+        margin-bottom: 35px;
+    }
+
+
+    .main-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .img-button,
+    .img-landlord {
+        margin-left: 55px;
+    }
+    .img-button {
+        width: 32%;
+        margin-bottom: 20px;
+        margin-top: unset;
+    }
+    .img-landlord {
+        width: 13%;
+        margin-top: 100px;
+        margin-bottom: unset;
+    }
+}
